@@ -4,6 +4,23 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FuzzyOverlay } from '@/components/FuzzyOverlay'
 
+interface Project {
+  name: string
+  tagline: string
+  description: string
+  budget: string
+  retainer: string
+  duration: string
+  website: string
+  image: string
+  technologies: string[]
+  features: string[]
+  metrics: string[]
+  challenges: string[]
+  solutions: string[]
+  color: string
+}
+
 export default function Portfolio() {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -11,7 +28,7 @@ export default function Portfolio() {
     transition: { duration: 0.8 }
   }
 
-  const projects = [
+  const projects: Project[] = [
     {
       name: "MyJodi",
       tagline: "Event Planning Platform",
@@ -46,7 +63,8 @@ export default function Portfolio() {
         "Built a centralized vendor dashboard",
         "Implemented real-time calendar syncing",
         "Developed a secure payment gateway"
-      ]
+      ],
+      color: "from-blue-500/20 to-cyan-500/20"
     },
     {
       name: "Robobooth",
@@ -81,7 +99,8 @@ export default function Portfolio() {
         "Custom IoT framework development",
         "Cloud-based image processing",
         "Centralized management dashboard"
-      ]
+      ],
+      color: "from-purple-500/20 to-pink-500/20"
     },
     {
       name: "Locus",
@@ -116,7 +135,8 @@ export default function Portfolio() {
         "Dynamic pricing algorithm",
         "Advanced availability system",
         "Automated booking workflow"
-      ]
+      ],
+      color: "from-blue-500/20 to-cyan-500/20"
     },
     {
       name: "Unlmtd",
@@ -151,7 +171,8 @@ export default function Portfolio() {
         "Custom analytics integration",
         "Unified dashboard development",
         "Automated report generation"
-      ]
+      ],
+      color: "from-purple-500/20 to-pink-500/20"
     }
   ]
 
