@@ -178,47 +178,38 @@ export default function Portfolio() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative h-[50vh] bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
+      {/* Hero Section - Adjusted height and positioning for mobile */}
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
         <FuzzyOverlay />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-4 py-20 sm:py-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-3xl mx-auto"
+              className="max-w-3xl mx-auto text-center mt-8 sm:mt-0"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
                 Our Portfolio
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 px-4 sm:px-0">
                 Transforming ideas into digital excellence
               </p>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+              {/* CTA Buttons - Adjusted spacing */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 px-4 sm:px-0">
                 <motion.a
                   href="/contact"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 rounded-full bg-white text-blue-600 font-medium 
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full 
+                           bg-white text-gray-900 font-medium text-base sm:text-lg
                            hover:bg-gray-50 transition-all transform hover:-translate-y-1 
-                           hover:shadow-lg flex items-center gap-2 group"
+                           hover:shadow-lg flex items-center justify-center gap-2"
                 >
                   Start Your Project
-                  <svg 
-                    className="w-5 h-5 transition-transform group-hover:translate-x-1" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M17 8l4 4m0 0l-4 4m4-4H3" 
-                    />
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </motion.a>
                 
@@ -226,23 +217,14 @@ export default function Portfolio() {
                   href="#projects"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 rounded-full border-2 border-white text-white font-medium 
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full 
+                           border-2 border-white text-white font-medium text-base sm:text-lg
                            hover:bg-white/10 transition-all transform hover:-translate-y-1 
-                           hover:shadow-lg flex items-center gap-2 group"
+                           hover:shadow-lg flex items-center justify-center gap-2"
                 >
                   View Projects
-                  <svg 
-                    className="w-5 h-5 transition-transform group-hover:translate-x-1" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M19 13l-7 7-7-7m14-8l-7 7-7-7" 
-                    />
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </motion.a>
               </div>

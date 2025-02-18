@@ -71,7 +71,7 @@ export default function Referral() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-[80vh] bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 overflow-hidden">
+      <section className="relative h-[60vh] bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 overflow-hidden">
         <FuzzyOverlay />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
@@ -111,39 +111,23 @@ export default function Referral() {
               <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white">
                 Earn $100 Per Referral
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Know someone who needs digital solutions? Refer them and earn rewards!
+              <p className="text-xl md:text-2xl text-gray-200 mb-8">
+                Know a Business that needs a professional website? Send them our way, and if they sign up, we'll pay you $100 as a thank you! 💰
               </p>
               
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-                <motion.a
-                  href="#referral-form"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 rounded-full bg-white text-green-600 font-medium 
-                           hover:bg-gray-50 transition-all transform hover:-translate-y-1 
-                           hover:shadow-lg flex items-center gap-2"
-                >
-                  Refer Now
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </motion.a>
-                
-                <motion.a
-                  href="#how-it-works"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 rounded-full border-2 border-white text-white font-medium 
-                           hover:bg-white/10 transition-all transform hover:-translate-y-1 
-                           hover:shadow-lg flex items-center gap-2"
-                >
-                  Learn More
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </motion.a>
-              </div>
+              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 rounded-full bg-white text-green-600 
+                         font-medium hover:bg-gray-50 transition-all transform hover:-translate-y-1 
+                         hover:shadow-lg"
+              >
+                Refer Someone Now
+                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </motion.a>
             </motion.div>
           </div>
         </div>

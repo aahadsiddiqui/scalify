@@ -15,9 +15,9 @@ export default function About() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
-      {/* Hero Section */}
-      <section className="relative h-[60vh] bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
+    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* Hero Section - Adjusted for better mobile responsiveness */}
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 overflow-hidden">
         <FuzzyOverlay />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
@@ -46,69 +46,50 @@ export default function About() {
           />
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="container mx-auto px-4">
-            <motion.div 
-              className="text-center max-w-3xl mx-auto"
-              {...fadeInUp}
+        <div className="absolute inset-0 flex items-center justify-center z-20">
+          <div className="container mx-auto px-4 py-20 sm:py-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-4xl mx-auto text-center mt-8 sm:mt-0"
             >
-              <span className="text-blue-400 font-semibold mb-4 block tracking-wider">
-                OUR STORY
-              </span>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
                 Transforming Digital Dreams Into Reality
               </h1>
-              <p className="text-xl text-gray-300 leading-relaxed mb-8">
+              <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 px-4 sm:px-0">
                 We're more than just developers – we're your partners in digital innovation
               </p>
-              
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+
+              {/* CTA Buttons - Adjusted for mobile */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 px-4 sm:px-0">
                 <motion.a
                   href="/contact"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 rounded-full bg-white text-blue-600 font-medium 
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full 
+                           bg-white text-blue-600 font-medium text-base sm:text-lg
                            hover:bg-gray-50 transition-all transform hover:-translate-y-1 
-                           hover:shadow-lg flex items-center gap-2"
+                           hover:shadow-lg flex items-center justify-center gap-2"
                 >
                   Schedule a Free Demo
-                  <svg 
-                    className="w-5 h-5 transition-transform group-hover:translate-x-1" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M17 8l4 4m0 0l-4 4m4-4H3" 
-                    />
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </motion.a>
-                
+
                 <motion.a
                   href="/portfolio"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 rounded-full border-2 border-white text-white font-medium 
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full 
+                           border-2 border-white text-white font-medium text-base sm:text-lg
                            hover:bg-white/10 transition-all transform hover:-translate-y-1 
-                           hover:shadow-lg flex items-center gap-2"
+                           hover:shadow-lg flex items-center justify-center gap-2"
                 >
                   View Our Work
-                  <svg 
-                    className="w-5 h-5 transition-transform group-hover:translate-x-1" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M9 5l7 7-7 7" 
-                    />
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </motion.a>
               </div>
